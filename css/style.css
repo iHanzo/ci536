@@ -36,10 +36,6 @@ li a:hover:not(.active) {
     background-color: grey;
 }
 
-
-/*Index & Tutorial Pages*/
-
-
 /* Add a gray background color with some padding */
 
 body {
@@ -186,7 +182,7 @@ th {
 }
 
 
-/*Contact Form*/
+/*Forms*/
 
 input[type="text"],
 select,
@@ -200,6 +196,12 @@ textarea {
     margin-bottom: 16px;
     resize: vertical;
 }
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
 
 input[type="submit"] {
     background-color: #4caf50;
@@ -221,7 +223,43 @@ form {
     padding: 40px;
 }
 
+#sign, #log {
+    display: none;  /* Hide this by default*/
+    position: fixed;
+    z-index: 1; /*Stays on top*/
+    width: 100%;
+    height: 100%;
+    overflow: auto; /*Allows scrolling*/
+}
 
+/* Float cancel button */
+.cancelbtn {
+    float: left;
+    width: 50%;
+  }
+
+/* Form close button */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #f44336;
+    cursor: pointer;
+  }
+
+  /* Clear everything on form exit*/
+  .buttons::after {
+      content:"";
+      clear: both;
+      display: table;
+  }
 /* Responsive layout - when the screen is less than 800px 
 wide, make the two columns stack on top of each other 
 instead of next to each other */
