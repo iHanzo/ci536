@@ -19,7 +19,7 @@ if (isset($_POST["submit"])) {
         header("location: ../signup.php?error=username_error");
         exit();
     }
-    else if (invalidEmail($email) !== false) {
+    else if (invalidEmail($email) == false) {
         header("location: ../signup.php?error=email_error");
         exit();
     }
