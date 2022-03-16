@@ -12,23 +12,23 @@ if (isset($_POST["submit"])) {
     require_once 'functions.fnc.php';
 
     if (emptyInputSignup($name, $email, $username, $pwd, $pwdRepeat) !== false) {
-        header("location: ../sginup.php?error=empty_input");
+        header("location: ../signup.php?error=empty_input");
         exit();
     }
-    if (invalidUName($username) !== false) {
-        header("location: ../sginup.php?error=username_error");
+    else if (invalidUName($username) !== false) {
+        header("location: ../signup.php?error=username_error");
         exit();
     }
-    if (invalidEmail($email) !== false) {
-        header("location: ../sginup.php?error=email_error");
+    else if (invalidEmail($email) == false) {
+        header("location: ../signup.php?error=email_error");
         exit();
     }
-    if (pwdMatch($pwd, $pwdRepeat) !== false) {
-        header("location: ../sginup.php?error=pwd_error");
+    else if (pwdMatch($pwd, $pwdRepeat) !== false) {
+        header("location: ../signup.php?error=pwd_error");
         exit();
     }
-    if (uNameExists($conn, $username, $email) !== false) {
-        header("location: ../sginup.php?error=username_taken");
+    else if (uNameExists($conn, $username, $email) !== false) {
+        header("location: ../signup.php?error=username_taken");
         exit();
     }
 
