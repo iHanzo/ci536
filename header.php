@@ -24,8 +24,8 @@
                     echo "<li><a href='logout.php'>Log out</a></li>";
                 }
                 else {
-                    echo "<li><button onclick="document.getElementById('sign').style.display='block'">Sign Up</button></li>";
-                    echo "<li><button onclick="document.getElementById('log').style.display='block'">Login</button></li>";
+                    echo "<li><button onclick=\"document.getElementById('sign').style.display='block'\">Sign Up</button></li>";
+                    echo "<li><button onclick=\"document.getElementById('log').style.display='block'\">Login</button></li>";
                 }
             ?>
         </ul>
