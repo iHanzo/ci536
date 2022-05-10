@@ -33,7 +33,8 @@
 </nav>
 
 <div id="sign" class="formbox">
-    <span onclick="document.getElementById('sign').style.display='none'" class="close" title="Close">X</span>
+   <!-- <span onclick="document.getElementById('sign').style.display='none'" class="close" title="Close">X</span> (if an X is wanted instead)-->
+   <button onclick="document.getElementById('sign').style.display='none'" class="close-button" id="close-button">Close</button>
     <form class="form-content" action="processes/signup.fnc.php" method="POST">
         <div class="fields">
             <h1>Sign Up</h1>
@@ -42,18 +43,18 @@
             <input type="text" name="uname" placeholder="User name" required>
             <input type="password" name="pwd" placeholder="Password" required>
             <input type="password" name="pwdrepeat" placeholder="Repeat password" required>
-            <p>Creation of an account is an acceptance of our <a href ="">Terms and Privacy</a> </p>
+            <p>Creation of an account is an acceptance of our <a href ="privacypolicy.html">Terms and Privacy</a> </p>
 
             <div class="buttons">
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                <button type="submit" class="signup">Sign Up</button>
+                <button type="button" onclick="document.getElementById('sign').style.display='none'" class="cancelbtn">Cancel</button>
+                <button type="submit" class="signupbtn">Sign Up</button>
             </div> 
         </div>
     </form>
 </div>
 
 <div id="log" class="formbox">
-    <span onclick="document.getElementById('log').style.display='none'" class="close" title="Close">X</span>
+    <button onclick="document.getElementById('log').style.display='none'" class="close-button" id="close-button">Close</button>
     <form action="processes/login.fnc.php" method="POST">
         <div class="fields">
             <h1>Login</h1>
@@ -61,8 +62,8 @@
             <input type="password" name="pwd" placeholder="Password">
 
             <div class="buttons">
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                <button type="submit" class="login">Login</button>
+                <button type="button" onclick="document.getElementById('log').style.display='none'" class="cancelbtn">Cancel</button>
+                <button type="submit" class="loginbtn">Login</button>
             </div> 
         </div>
     </form>
