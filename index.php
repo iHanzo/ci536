@@ -8,7 +8,7 @@
         <h2>Content</h2>
         <div class=index-content-list>
             <div>
-                <h3>Content A</h3>
+                <h3>Content A. Test.</h3>
             </div>
             <div>
                 <h3>Content B</h3>
