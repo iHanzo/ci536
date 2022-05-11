@@ -71,6 +71,8 @@ body {
     background: white;
   }
 
+/*Style for privacy policy*/
+
 #ppheader {
     width: 60%;
     margin: 0 auto;
@@ -78,6 +80,18 @@ body {
 
 #ppheader a, #ppheader p {
     font-size: 18px;
+}
+
+#ppheader h1 {
+    font-size: 24px;
+}
+
+#ppheader h2 {
+    font-size: 22px;
+}
+
+#ppheader h3 {
+    font-size: 20px;
 }
 /* Spacer to fill empty space */
 
