@@ -56,6 +56,14 @@ body {
     
 }
 
+#page-container {
+    position:relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: 2.5rem;
+}
 /* Header/Blog Title */
 
 .index-header {
@@ -70,6 +78,7 @@ body {
     text-align: center;
     background: white;
   }
+
 
 /*Style for privacy policy*/
 
