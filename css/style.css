@@ -122,6 +122,16 @@ body {
     float: left;
 }
 
+/*Event page flex layout*/
+
+.flexrow {
+    display: flex;
+}
+
+.flexcolumn {
+    flex: 50%;
+}
+
 
 /* Styling an image*/
 
@@ -151,6 +161,7 @@ body {
     padding: 30px;
     margin-top: 20px;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .leftcolumn .card p {
@@ -161,6 +172,11 @@ body {
     position: relative;
     padding: 20px;
     width: 100%;
+}
+
+/*Comment cards*/
+#commentcard {
+    background-color: lightgrey;
 }
 
 
@@ -188,6 +204,7 @@ footer {
 
 .footer {
     padding: 20px;
+    padding-top: 20px;
     text-align: center;
     background: #ddd;
     margin: 20px;
@@ -336,11 +353,17 @@ form {
     color: #000000;
     padding: 3px 8px;
     font-size: 0.9rem;
+    cursor: pointer;
 }
 
 .buttons {
     padding-top: 35px;
     width: 100%;
+    cursor: pointer;
+}
+
+.commentsub {
+    float: right;
 }
 
 /* Form close button */
