@@ -50,7 +50,7 @@ function uNameExists($conn, $username, $email) {
     // check if prepared statement will fail
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         // if there is false -> user sent to signup
-        header("location: ../signup.php?error=stmtfailed");
+        header("location: ../index.php?error=stmtfailed");
         exit();
     }
 
@@ -78,7 +78,7 @@ function createUser($conn, $name, $email, $username, $pwd) {
     $stmt = mysqli_stmt_init($conn);
     
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("location: ../signup.php?error=stmt_failed");
+        header("location: ../index.php?error=stmt_failed");
         exit();
     }
 
@@ -87,7 +87,7 @@ function createUser($conn, $name, $email, $username, $pwd) {
     mysqli_stmt_bind_param($stmt, "ssss", $name, $email, $username, $hashedPwd);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("location: ../signup.php?error=none");
+    header("location: ../index.php?error=none");
 }
 
 function emptyInputLogin($username, $pwd) {
@@ -104,7 +104,7 @@ function loginUser($conn, $username, $pwd) {
     $validUName = uNameExists($conn, $username, $username);
 
     if ($validUName === false) {
-        header("location: ../login.php?error=wrong_login");
+        header("location: ../index.php?error=wrong_login");
         exit();
     }
 
@@ -112,7 +112,7 @@ function loginUser($conn, $username, $pwd) {
     $checkPwd = password_verify($pwd, $pwdHashed);
 
     if ($checkPwd === false) {
-        header("location: ../login.php?error=wrong_login");
+        header("location: ../index.php?error=wrong_login");
         exit();
     }
     else if ($checkPwd === true) {

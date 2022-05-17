@@ -46,7 +46,7 @@
 
             <div class="buttons">
                 <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                <button type="submit" class="signup">Sign Up</button>
+                <button type="submit" class="signup" name="submit">Sign Up</button>
             </div> 
         </div>
     </form>
@@ -57,17 +57,16 @@
     <form action="processes/login.fnc.php" method="POST">
         <div class="fields">
             <h1>Login</h1>
-            <input type="text" name="name" placeholder="Username/Email">
+            <input type="text" name="uname" placeholder="Username/Email">
             <input type="password" name="pwd" placeholder="Password">
 
             <div class="buttons">
                 <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                <button type="submit" class="login">Login</button>
+                <button type="submit" class="login" name="submit">Login</button>
             </div> 
         </div>
     </form>
 </div>
-
 
 <script>
 // Get the two formboxes

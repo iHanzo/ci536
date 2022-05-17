@@ -12,23 +12,23 @@ if (isset($_POST["submit"])) {
     require_once 'functions.fnc.php';
 
     if (emptyInputSignup($name, $email, $username, $pwd, $pwdRepeat) !== false) {
-        header("location: ../signup.php?error=empty_input");
+        header("location: ../index.php?error=empty_input");
         exit();
     }
     else if (invalidUName($username) !== false) {
-        header("location: ../signup.php?error=username_error");
+        header("location: ../index.php?error=username_error");
         exit();
     }
     else if (invalidEmail($email) == false) {
-        header("location: ../signup.php?error=email_error");
+        header("location: ../index.php?error=email_error");
         exit();
     }
     else if (pwdMatch($pwd, $pwdRepeat) !== false) {
-        header("location: ../signup.php?error=pwd_error");
+        header("location: ../index.php?error=pwd_error");
         exit();
     }
     else if (uNameExists($conn, $username, $email) !== false) {
-        header("location: ../signup.php?error=username_taken");
+        header("location: ../index.php?error=username_taken");
         exit();
     }
 
@@ -36,6 +36,6 @@ if (isset($_POST["submit"])) {
 
 }
 else {
-    header("location: ../signup.php");
+    header("location: ../index.php");
     exit;
 }
