@@ -18,10 +18,15 @@
 <div id ="page-container">
     <div id="content-wrap">
         <nav>
-            <div class="wrapper">
+            <div class="wrapper" id="navBar">
+                <div class="homeB">
                 <ul>
-                    <li><button onclick="window.location.href='index.php';">Home</button></li>
-                    <?php
+                    <li onclick="window.location.href='index.php';" id="homeLogo">GIGBUDS.</li>
+                </ul>
+                </div>
+                <div class="navB">
+                <ul>
+                <?php
                     if (isset($_SESSION["userid"])) {
                         echo "<li><button onclick=\"window.location.href='profile.php';\">Profile</button></li>";
                         echo "<li><button onclick=\"window.location.href='logout.php';\">Logout</button></li>";
@@ -32,6 +37,7 @@
                     }
                     ?>
                 </ul>
+                </div>
             </div>
         </nav>
 

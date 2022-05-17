@@ -20,6 +20,12 @@ li {
     float: left;
 }
 
+#homeLogo {
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 li a {
     display: block;
     color: white;
@@ -78,7 +84,6 @@ body {
     text-align: center;
     background: white;
   }
-
 
 /*Style for privacy policy*/
 
@@ -230,7 +235,18 @@ nav {
     overflow: hidden;
 }
 
+#navBar {
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.homeB {
+    flex: 50%;
+}
+
+.navB {
+    flex: 50%;
+}
 /*style the links inside the nav bar*/
 
 nav a {

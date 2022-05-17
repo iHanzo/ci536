@@ -1,7 +1,9 @@
 <?php include_once 'header.php';?>
 
-        <section class="header">
-            <h2>GIGBUDS.</h2>
+        <section class="header" id="imageContainer">
+            <div class="innerContainer">
+                <h2>GIGBUDS.</h2>
+            </div>
         </section>
     
         <section class="leftcolumn">
