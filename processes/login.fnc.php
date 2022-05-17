@@ -9,13 +9,13 @@ if (isset($_POST["submit"])) {
     require_once 'functions.fnc.php';
 
     if (emptyInputLogin($username, $pwd) !== false) {
-        header("location: ../login.php?error=empty_input");
+        header("location: ../index.php?error=empty_input");
         exit();
     }
 
     loginUser($conn, $username, $pwd);
 }
 else {
-    header("location: ../login.php");
+    header("location: ../index.php");
     exit();
 }

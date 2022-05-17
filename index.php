@@ -52,7 +52,55 @@
                     <p>Price: £14.00</p> 
                 </div>
             </div>
+          
+    <?php
+        if (isset($_GET["error"])) {
+            if ($_GET["error"] == "empty_input") {
+            echo '<script type="text/javascript">
+                window.onload = function () {alert("Please, fill in all fields!"); }
+            </script>';
+            }
+            else if ($_GET["error"] == "wrong_login") {
+                echo '<script type="text/javascript">
+                window.onload = function () {alert("Wrong login details!"); }
+            </script>';
+            }
+            else if ($_GET["error"] == "username_error") {
+                echo '<script type="text/javascript">
+                window.onload = function () {alert("Username can only contain letters and numbers!"); }
+            </script>';
+            }
+            else if ($_GET["error"] == "email_error") {
+                echo '<script type="text/javascript">
+                window.onload = function () {alert("Email format is incorrect!"); }
+            </script>';
+            }
+            else if ($_GET["error"] == "pwd_error") {
+                echo '<script type="text/javascript">
+                window.onload = function () {alert("Passwords do not match!"); }
+            </script>';
+            }
+            else if ($_GET["error"] == "username_taken") {
+                echo '<script type="text/javascript">
+                window.onload = function () {alert("Username is already taken!"); }
+            </script>';
+            }
+            else if ($_GET["error"] == "stmt_failed") {
+                echo '<script type="text/javascript">
+                window.onload = function () {alert("Something went wrong. Please try again!"); }
+            </script>';
+            }
+            else if ($_GET["error"] == "none") {
+                echo '<script type="text/javascript">
+                window.onload = function () {alert("You have signed up!"); }
+            </script>';
+            }
+        }
+    ?>
+
+
         </section>
     </div>
     
+
 <?php include_once 'footer.php';?>
